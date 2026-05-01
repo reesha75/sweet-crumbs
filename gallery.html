@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Sweet Crumbs Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        padding-top: 2rem;
+      }
+      .gallery-item {
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        aspect-ratio: 4/5;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(44, 36, 27, 0.9), transparent);
+        padding: 2rem 1.5rem 1.5rem;
+        color: #fff;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+      }
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .gallery-overlay h3 {
+        font-family: "Quicksand", sans-serif;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-content">
+        <div class="loader-spinner">
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+        </div>
+        <p class="loader-title">Sweet Crumbs</p>
+        <p class="loader-subtitle">Welcome to our bakery</p>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="logo" href="./index.html">Sweet Crumbs</a>
+        <button class="menu-toggle" type="button">Menu</button>
+        <nav>
+          <ul class="nav-list">
+            <li><a class="nav-link" href="./index.html">Home</a></li>
+            <li><a class="nav-link" href="./shop.html">Shop</a></li>
+            <li><a class="nav-link" href="./menu.html">Menu</a></li>
+            <li><a class="nav-link active" href="./gallery.html">Gallery</a></li>
+            <li><a class="nav-link" href="./about.html">About</a></li>
+            <li><a class="nav-link" href="./contact.html">Contact</a></li>
+            <li><a class="nav-link cart-link" href="#" id="view-cart-link">View Cart (<span class="cart-count">0</span>)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero fade-up">
+        <div class="container">
+          <h1>Our Work</h1>
+          <p>
+            A visual showcase of our custom wedding cakes, birthday treats, and everyday bakes.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container fade-up">
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1559553156-2e97137af16f?auto=format&fit=crop&w=800&q=80" alt="Wedding Cake" />
+              <div class="gallery-overlay">
+                <h3>Floral Wedding Tier</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=800&q=80" alt="Macaron Tower" />
+              <div class="gallery-overlay">
+                <h3>Macaron Event Setup</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=800&q=80" alt="Chocolate Drip Cake" />
+              <div class="gallery-overlay">
+                <h3>Birthday Chocolate Drip</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=800&q=80" alt="Cupcake Platter" />
+              <div class="gallery-overlay">
+                <h3>Corporate Cupcake Platter</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=800&q=80" alt="Pastries" />
+              <div class="gallery-overlay">
+                <h3>Morning Pastries Spread</h3>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80" alt="Donuts" />
+              <div class="gallery-overlay">
+                <h3>Artisan Donut Box</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Sweet Crumbs Bakery</h3>
+            <p>Handcrafted desserts for birthdays, weddings, and corporate events.</p>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li>+92 300 1234567</li>
+              <li>hello@sweetcrumbs.com</li>
+              <li>Mon-Sun: 9 AM - 11 PM</li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright">© 2026 Sweet Crumbs Bakery. All rights reserved. Made by Areesha.</p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
+

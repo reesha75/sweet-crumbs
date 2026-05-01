@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Crumbs Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-content">
+        <div class="loader-spinner">
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+        </div>
+        <p class="loader-title">Sweet Crumbs</p>
+        <p class="loader-subtitle">Welcome to our bakery</p>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="logo" href="./index.html">Sweet Crumbs</a>
+        <button class="menu-toggle" type="button">Menu</button>
+        <nav>
+          <ul class="nav-list">
+            <li><a class="nav-link active" href="./index.html">Home</a></li>
+            <li><a class="nav-link" href="./shop.html">Shop</a></li>
+            <li><a class="nav-link" href="./menu.html">Menu</a></li>
+            <li><a class="nav-link" href="./gallery.html">Gallery</a></li>
+            <li><a class="nav-link" href="./about.html">About</a></li>
+            <li><a class="nav-link" href="./contact.html">Contact</a></li>
+            <li><a class="nav-link cart-link" href="#" id="view-cart-link">View Cart (<span class="cart-count">0</span>)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="kicker">HANDCRAFTED DESSERTS</p>
+            <h1>Sweet Crumbs Bakery</h1>
+            <p>
+              Fresh cakes, cupcakes, and cookies made daily with premium
+              ingredients. Celebrate your moments with our handcrafted bakery
+              creations.
+            </p>
+            <a class="btn primary" href="./menu.html">Explore Menu</a>
+          </div>
+          <div class="hero-card">
+            <img
+              src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?auto=format&fit=crop&w=1200&q=80"
+              alt="Bakery display with cupcakes"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Why Customers Love Us</h2>
+            <p>
+              Traditional recipes with a modern touch, baked fresh every single
+              day.
+            </p>
+          </div>
+          <div class="features">
+            <article class="feature fade-up">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h3>Fresh Daily</h3>
+              <p>
+                Every order is prepared with same-day baked sponge and cream.
+              </p>
+            </article>
+            <article class="feature fade-up" style="transition-delay: 0.1s;">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <h3>Fast Delivery</h3>
+              <p>
+                Scheduled delivery slots for birthdays, anniversaries, and events.
+              </p>
+            </article>
+            <article class="feature fade-up" style="transition-delay: 0.2s;">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3>Custom Designs</h3>
+              <p>
+                From minimal to luxury cakes, we design exactly your way.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Signature Picks</h2>
+            <p>Some bestsellers inspired by the style you shared.</p>
+          </div>
+
+          <div class="categories">
+            <button class="chip active" data-filter="all">All Items</button>
+            <button class="chip" data-filter="cake">Cakes</button>
+            <button class="chip" data-filter="cupcake">Cupcakes</button>
+            <button class="chip" data-filter="cookie">Cookies</button>
+          </div>
+
+          <div class="products-grid">
+            <article class="card" data-type="cake">
+              <img
+                src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=900&q=80"
+                alt="Berry cake"
+              />
+              <div class="card-content">
+                <h3>Berry Dream Cake</h3>
+                <p>Soft sponge, whipped cream, fresh berries.</p>
+                <div class="row">
+                  <span>₹699</span>
+                  <a href="./product-detail.html" class="btn mini">Add</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-type="cupcake">
+              <img
+                src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80"
+                alt="Chocolate cupcake"
+              />
+              <div class="card-content">
+                <h3>Choco Swirl Cupcake</h3>
+                <p>Moist cocoa cupcake with buttercream swirl.</p>
+                <div class="row">
+                  <span>₹149</span>
+                  <a href="./product-detail.html" class="btn mini">Add</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-type="cookie">
+              <img
+                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=80"
+                alt="Butter cookies"
+              />
+              <div class="card-content">
+                <h3>Classic Butter Cookies</h3>
+                <p>Crispy edge, soft center, rich buttery flavor.</p>
+                <div class="row">
+                  <span>₹249</span>
+                  <a href="./product-detail.html" class="btn mini">Add</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div style="text-align: center; margin-top: 3rem;">
+            <a href="./shop.html" class="btn primary">View Full Shop</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title fade-up">
+            <h2>What Our Customers Say</h2>
+            <p>Real love from real customers who celebrated their special moments with us.</p>
+          </div>
+          <div class="features">
+            <article class="testimonial-card fade-up">
+              <div class="quote-icon">"</div>
+              <div class="stars">★★★★★</div>
+              <p>"The best red velvet cake I have ever had! The design was exactly what I asked for, and the taste was incredible. Highly recommend Sweet Crumbs!"</p>
+              <div class="author">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" alt="Sarah J." />
+                <div>
+                  <h4>Sarah J.</h4>
+                  <span>Birthday Order</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card fade-up" style="transition-delay: 0.1s;">
+              <div class="quote-icon">"</div>
+              <div class="stars">★★★★★</div>
+              <p>"Ordered customized cupcakes for a corporate event. They looked very premium and the delivery was exactly on time. Everyone loved them."</p>
+              <div class="author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Ahmed K." />
+                <div>
+                  <h4>Ahmed K.</h4>
+                  <span>Corporate Event</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card fade-up" style="transition-delay: 0.2s;">
+              <div class="quote-icon">"</div>
+              <div class="stars">★★★★★</div>
+              <p>"Their butter cookies are my daily craving. I love that they bake fresh every day. The ambiance of the packaging feels so luxurious."</p>
+              <div class="author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Maria S." />
+                <div>
+                  <h4>Maria S.</h4>
+                  <span>Regular Customer</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter fade-up">
+        <div class="container">
+          <div class="newsletter-box">
+            <h2>Join Our Sweet Community</h2>
+            <p style="color: var(--muted); margin-top: 0.5rem;">Subscribe to get updates on seasonal flavors, special discounts, and baking tips.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email address" required />
+              <button class="btn primary" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Sweet Crumbs Bakery</h3>
+            <p>Elegant cakes and desserts for every celebration. Taste that feels homemade, look that feels premium.</p>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li>+92 300 1234567</li>
+              <li>hello@sweetcrumbs.com</li>
+              <li>Mon-Sun: 9 AM - 11 PM</li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright">© 2026 Sweet Crumbs Bakery. All rights reserved. Made by Areesha.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

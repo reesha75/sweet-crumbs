@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Sweet Crumbs Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-content">
+        <div class="loader-spinner">
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+        </div>
+        <p class="loader-title">Sweet Crumbs</p>
+        <p class="loader-subtitle">Welcome to our bakery</p>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="logo" href="./index.html">Sweet Crumbs</a>
+        <button class="menu-toggle" type="button">Menu</button>
+        <nav>
+          <ul class="nav-list">
+            <li><a class="nav-link" href="./index.html">Home</a></li>
+            <li><a class="nav-link" href="./shop.html">Shop</a></li>
+            <li><a class="nav-link active" href="./menu.html">Menu</a></li>
+            <li><a class="nav-link" href="./gallery.html">Gallery</a></li>
+            <li><a class="nav-link" href="./about.html">About</a></li>
+            <li><a class="nav-link" href="./contact.html">Contact</a></li>
+            <li><a class="nav-link cart-link" href="#" id="view-cart-link">View Cart (<span class="cart-count">0</span>)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero fade-up">
+        <div class="container">
+          <h1>Dine-in Menu</h1>
+          <p>
+            Experience our fresh daily bakes and signature hot beverages.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0;">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+          <div class="menu-category fade-up" style="margin-bottom: 3rem;">
+            <h2 style="border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; margin-bottom: 1.5rem; color: var(--accent-dark);">Signature Cakes (per slice)</h2>
+            
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Berry Dream Cake</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹199</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">Soft sponge, whipped cream, fresh berries.</p>
+
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Royal Chocolate Cake</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹249</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">Three-layer chocolate sponge with silky ganache.</p>
+
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">New York Cheesecake</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹299</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">Classic baked cheesecake with a buttery graham crust.</p>
+            
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Matcha Green Tea Cake</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹275</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">Light sponge infused with premium Japanese matcha.</p>
+          </div>
+
+          <div class="menu-category fade-up" style="margin-bottom: 3rem;">
+            <h2 style="border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; margin-bottom: 1.5rem; color: var(--accent-dark);">Gourmet Cupcakes</h2>
+            
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Choco Swirl Cupcake</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹149</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">Moist cocoa cupcake with buttercream swirl.</p>
+
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Blue Velvet Cupcake</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹159</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">Vanilla base with signature sky-blue cream swirl.</p>
+            
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Salted Caramel Cupcake</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹169</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">Rich caramel core and sea salt sprinkle.</p>
+          </div>
+
+          <div class="menu-category fade-up" style="margin-bottom: 3rem;">
+            <h2 style="border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; margin-bottom: 1.5rem; color: var(--accent-dark);">Artisan Pastries & Cookies</h2>
+            
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Butter Croissant</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹180</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">Flaky, buttery, authentic French croissant.</p>
+            
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Fresh Fruit Tart</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹280</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">Custard filled tart topped with seasonal fruits.</p>
+
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Macadamia Nut Cookie</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹120</span>
+            </div>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 1.5rem;">White chocolate and toasted macadamia nuts.</p>
+          </div>
+          
+          <div class="menu-category fade-up" style="margin-bottom: 3rem;">
+            <h2 style="border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; margin-bottom: 1.5rem; color: var(--accent-dark);">Hot Beverages</h2>
+            
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Signature Hot Chocolate</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹250</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Caramel Macchiato</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹300</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="margin: 0; font-family: 'Quicksand', sans-serif; font-weight: 600;">Classic Cappuccino</h3>
+              <div style="flex-grow: 1; border-bottom: 1px dotted var(--line); margin: 0 1rem; position: relative; top: -5px;"></div>
+              <span style="font-weight: 600;">₹220</span>
+            </div>
+          </div>
+          
+          <div style="text-align: center; margin-top: 4rem;">
+            <p style="color: var(--muted); margin-bottom: 1.5rem;">Looking to order whole cakes or boxes?</p>
+            <a href="./shop.html" class="btn primary">Visit Online Shop</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Sweet Crumbs Bakery</h3>
+            <p>Handcrafted desserts for birthdays, weddings, and corporate events.</p>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li>+92 300 1234567</li>
+              <li>hello@sweetcrumbs.com</li>
+              <li>Mon-Sun: 9 AM - 11 PM</li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright">© 2026 Sweet Crumbs Bakery. All rights reserved. Made by Areesha.</p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
+

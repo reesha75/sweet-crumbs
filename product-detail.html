@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details | Sweet Crumbs Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .product-detail-section {
+        padding: 5rem 0;
+      }
+      .product-detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+      .product-image {
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+      }
+      .product-info h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+      }
+      .price {
+        font-size: 1.8rem;
+        color: var(--accent);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+      .product-info p {
+        color: var(--muted);
+        line-height: 1.8;
+        margin-bottom: 2rem;
+      }
+      .quantity-selector {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      .quantity-selector input {
+        width: 60px;
+        padding: 0.5rem;
+        text-align: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        font: inherit;
+      }
+      .meta {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--line);
+      }
+      .meta p {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+      .meta span {
+        font-weight: 600;
+        color: var(--text);
+      }
+      @media (max-width: 900px) {
+        .product-detail-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-content">
+        <div class="loader-spinner">
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+        </div>
+        <p class="loader-title">Sweet Crumbs</p>
+        <p class="loader-subtitle">Welcome to our bakery</p>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="logo" href="./index.html">Sweet Crumbs</a>
+        <button class="menu-toggle" type="button">Menu</button>
+        <nav>
+          <ul class="nav-list">
+            <li><a class="nav-link" href="./index.html">Home</a></li>
+            <li><a class="nav-link active" href="./shop.html">Shop</a></li>
+            <li><a class="nav-link" href="./menu.html">Menu</a></li>
+            <li><a class="nav-link" href="./gallery.html">Gallery</a></li>
+            <li><a class="nav-link" href="./about.html">About</a></li>
+            <li><a class="nav-link" href="./contact.html">Contact</a></li>
+            <li><a class="nav-link cart-link" href="#" id="view-cart-link">View Cart (<span class="cart-count">0</span>)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-detail-section fade-up">
+        <div class="container product-detail-grid">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=1200&q=80" alt="Berry Dream Cake" />
+          </div>
+          <div class="product-info">
+            <h1>Berry Dream Cake</h1>
+            <div class="price">₹699</div>
+            <p>
+              Experience the perfect balance of sweet and tart with our signature Berry Dream Cake. 
+              Made with three layers of ultra-soft vanilla sponge, filled with our house-made mixed berry compote, 
+              and elegantly frosted with a light whipped cream. Crowned with seasonal fresh berries, it is 
+              the perfect centerpiece for any celebration.
+            </p>
+            <div class="quantity-selector">
+              <label for="qty">Quantity:</label>
+              <input type="number" id="qty" value="1" min="1" max="10" />
+              <button class="btn primary add-to-cart-btn" type="button" style="padding: 0.75rem 2.5rem;">Add to Cart</button>
+            </div>
+            <div class="meta">
+              <p><span>Category:</span> Cakes</p>
+              <p><span>Allergens:</span> Contains Wheat, Dairy, and Eggs. Manufactured in a facility that processes nuts.</p>
+              <p><span>Availability:</span> Baked Fresh Daily</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Sweet Crumbs Bakery</h3>
+            <p>Handcrafted desserts for birthdays, weddings, and corporate events.</p>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li>+92 300 1234567</li>
+              <li>hello@sweetcrumbs.com</li>
+              <li>Mon-Sun: 9 AM - 11 PM</li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright">© 2026 Sweet Crumbs Bakery. All rights reserved. Made by Areesha.</p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
+

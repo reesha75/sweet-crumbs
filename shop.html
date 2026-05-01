@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Sweet Crumbs Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-content">
+        <div class="loader-spinner">
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+        </div>
+        <p class="loader-title">Sweet Crumbs</p>
+        <p class="loader-subtitle">Welcome to our bakery</p>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container topbar">
+        <a class="logo" href="./index.html">Sweet Crumbs</a>
+        <button class="menu-toggle" type="button">Menu</button>
+        <nav>
+          <ul class="nav-list">
+            <li><a class="nav-link" href="./index.html">Home</a></li>
+            <li><a class="nav-link active" href="./shop.html">Shop</a></li>
+            <li><a class="nav-link" href="./menu.html">Menu</a></li>
+            <li><a class="nav-link" href="./gallery.html">Gallery</a></li>
+            <li><a class="nav-link" href="./about.html">About</a></li>
+            <li><a class="nav-link" href="./contact.html">Contact</a></li>
+            <li><a class="nav-link cart-link" href="#" id="view-cart-link">View Cart (<span class="cart-count">0</span>)</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero fade-up">
+        <div class="container">
+          <h1>Our Bakery Shop</h1>
+          <p>
+            Browse our complete collection of 36 handcrafted desserts and baked goods.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="categories fade-up">
+            <button class="chip active" data-filter="all">All Items</button>
+            <button class="chip" data-filter="cake">Cakes</button>
+            <button class="chip" data-filter="cupcake">Cupcakes</button>
+            <button class="chip" data-filter="cookie">Cookies</button>
+            <button class="chip" data-filter="pastry">Pastries</button>
+          </div>
+
+          <div class="products-grid">
+            <!-- CAKES (9) -->
+            <article class="card fade-up" data-type="cake">
+              <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=600&q=80" alt="Berry Dream Cake" />
+              <div class="card-content"><h3>Berry Dream Cake</h3><p>Soft sponge, whipped cream, fresh berries.</p><div class="row"><span>₹699</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cake">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="Royal Chocolate Cake" />
+              <div class="card-content"><h3>Royal Chocolate Cake</h3><p>Three-layer chocolate sponge with silky ganache.</p><div class="row"><span>₹899</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cake">
+              <img src="https://media.istockphoto.com/id/954707738/photo/red-cake-without-cream-red-velvet-on-a-white-wooden-table-decorated-with-strawberries-roses.webp?a=1&b=1&s=612x612&w=0&k=20&c=-5Zfl2rzMJUaBdbtEpSiwtXtNwpzyXeL7XWUayy6C5w=" alt="Red Velvet Bliss" />
+              <div class="card-content"><h3>Red Velvet Bliss</h3><p>Classic red velvet topped with cream cheese frosting.</p><div class="row"><span>₹999</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cake">
+              <img src="https://images.unsplash.com/photo-1557308536-ee471ef2c390?auto=format&fit=crop&w=600&q=80" alt="New York Cheesecake" />
+              <div class="card-content"><h3>New York Cheesecake</h3><p>Classic baked cheesecake with a buttery graham crust.</p><div class="row"><span>₹1099</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cake">
+              <img src="https://images.unsplash.com/photo-1514517521153-1be72277b32f?auto=format&fit=crop&w=600&q=80" alt="Black Forest Cake" />
+              <div class="card-content"><h3>Black Forest Cake</h3><p>Dark chocolate, cherries, and fresh whipped cream.</p><div class="row"><span>₹850</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cake">
+              <img src="https://images.unsplash.com/photo-1627834377411-8da5f4f09de8?auto=format&fit=crop&w=600&q=80" alt="Caramel Crunch Cake" />
+              <div class="card-content"><h3>Caramel Crunch Cake</h3><p>Vanilla sponge drenched in salted caramel.</p><div class="row"><span>₹750</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            
+            <article class="card fade-up" data-type="cake">
+              <img src="https://plus.unsplash.com/premium_photo-1716918178946-5922b4e8645d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TGVtb24lMjBEcml6emxlJTIwQ2FrZSUyMGNha2V8ZW58MHx8MHx8fDA%3D" alt="Lemon Drizzle Cake" />
+              <div class="card-content"><h3>Lemon Drizzle Cake</h3><p>Zesty lemon cake with a tangy sugar glaze.</p><div class="row"><span>₹600</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cake">
+              <img src="https://images.unsplash.com/photo-1605807646983-377bc5a76493?auto=format&fit=crop&w=600&q=80" alt="Matcha Green Tea Cake" />
+              <div class="card-content"><h3>Matcha Green Tea Cake</h3><p>Light sponge infused with premium Japanese matcha.</p><div class="row"><span>₹950</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cake">
+              <img src="https://images.unsplash.com/photo-1662230791691-b77f85c5b43a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8VGlyYW1pc3UlMjBDYWtlJTIwY2FrZXxlbnwwfHwwfHx8MA%3D%3D" alt="Tiramisu Cake" />
+              <div class="card-content"><h3>Tiramisu Cake</h3><p>Coffee-soaked ladyfingers and mascarpone cream.</p><div class="row"><span>₹1100</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cake">
+              <img src="https://images.unsplash.com/photo-1546856139-46fb2b57ff21?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJvc2UlMjBwZXRhbCUyMGNha2V8ZW58MHx8MHx8fDA%3D" alt="Rose Petal Cake" />
+              <div class="card-content"><h3>Rose Petal Cake</h3><p>Light rose sponge topped with cream and edible petals.</p><div class="row"><span>₹980</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+
+            <!-- CUPCAKES (9) -->
+            <article class="card fade-up" data-type="cupcake">
+              <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=600&q=80" alt="Choco Swirl Cupcake" />
+              <div class="card-content"><h3>Choco Swirl Cupcake</h3><p>Moist cocoa cupcake with buttercream swirl.</p><div class="row"><span>₹149</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cupcake">
+              <img src="https://media.istockphoto.com/id/1625343184/photo/anniversary-cupcakes-in-a-gift-box-with-birthday-and-valentines-day.webp?a=1&b=1&s=612x612&w=0&k=20&c=t4r3r-h1x55l7xE8SSdvoikTxJz9qI9ku5EsgZOtG18=" alt="Blue Velvet Cupcake" />
+              <div class="card-content"><h3>Blue Velvet Cupcake</h3><p>Vanilla base with signature sky-blue cream swirl.</p><div class="row"><span>₹159</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cupcake">
+              <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=600&q=80" alt="Vanilla Bean Cupcake" />
+              <div class="card-content"><h3>Vanilla Bean Cupcake</h3><p>Fluffy vanilla cake with real vanilla bean frosting.</p><div class="row"><span>₹129</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cupcake">
+              <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80" alt="Strawberry Cupcake" />
+              <div class="card-content"><h3>Strawberry Cupcake</h3><p>Topped with fresh strawberry buttercream.</p><div class="row"><span>₹139</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cupcake">
+              <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=600&q=80" alt="Salted Caramel Cupcake" />
+              <div class="card-content"><h3>Salted Caramel Cupcake</h3><p>Rich caramel core and sea salt sprinkle.</p><div class="row"><span>₹169</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cupcake">
+              <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=600&q=80" alt="Peanut Butter Cupcake" />
+              <div class="card-content"><h3>Peanut Butter Cupcake</h3><p>Chocolate cake with creamy peanut frosting.</p><div class="row"><span>₹179</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cupcake">
+              <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=600&q=80" alt="Mint Choco Cupcake" />
+              <div class="card-content"><h3>Mint Choco Cupcake</h3><p>Refreshing mint frosting over dark chocolate.</p><div class="row"><span>₹159</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cupcake">
+              <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=600&q=80" alt="Coffee Cupcake" />
+              <div class="card-content"><h3>Espresso Cupcake</h3><p>Infused with double espresso shots.</p><div class="row"><span>₹149</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cupcake">
+              <img src="https://images.unsplash.com/photo-1771016833930-859834ab08ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TGVtb24lMjBaZXN0JTIwQ3VwY2FrZXxlbnwwfHwwfHx8MA%3D%3D" alt="Lemon Cupcake" />
+              <div class="card-content"><h3>Lemon Zest Cupcake</h3><p>Tangy lemon curd center with sweet frosting.</p><div class="row"><span>₹139</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+
+            <!-- COOKIES (9) -->
+            <article class="card fade-up" data-type="cookie">
+              <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80" alt="Butter Cookie Jar" />
+              <div class="card-content"><h3>Butter Cookie Jar</h3><p>Traditional buttery cookies with soft crumb texture.</p><div class="row"><span>₹249</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cookie">
+              <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Choco Chip Cookies" />
+              <div class="card-content"><h3>Choco Chip Cookies</h3><p>Golden baked cookies loaded with dark choco chips.</p><div class="row"><span>₹299</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cookie">
+              <img src="https://images.unsplash.com/photo-1531262560270-f9e59c908896?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Oatmeal Raisin" />
+              <div class="card-content"><h3>Oatmeal Raisin</h3><p>Chewy oats mixed with sweet golden raisins.</p><div class="row"><span>₹220</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cookie">
+              <img src="https://plus.unsplash.com/premium_photo-1668780375883-80bc81835dce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UGVhbnV0JTIwQnV0dGVyJTIwQ29va2llJTIwY29va2llfGVufDB8fDB8fHww" alt="Peanut Butter Cookie" />
+              <div class="card-content"><h3>Peanut Butter Cookie</h3><p>Soft, thick, and packed with roasted peanuts.</p><div class="row"><span>₹250</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cookie">
+              <img src="https://images.unsplash.com/photo-1692746992998-96d2dac03381?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RG91YmxlJTIwQ2hvY29sYXRlJTIwY29va2llfGVufDB8fDB8fHww" alt="Double Chocolate" />
+              <div class="card-content"><h3>Double Chocolate</h3><p>Fudgy chocolate cookie with white choco chips.</p><div class="row"><span>₹310</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cookie">
+              <img src="https://images.unsplash.com/photo-1436565121087-bb8d210c9752?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Macadamia Nut" />
+              <div class="card-content"><h3>Macadamia Nut</h3><p>White chocolate and toasted macadamia nuts.</p><div class="row"><span>₹350</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cookie">
+              <img src="https://plus.unsplash.com/premium_photo-1668784197038-072eff0d0c12?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNvb2tpZXMlMjBwaWN8ZW58MHx8MHx8fDA%3D" alt="Snickerdoodle" />
+              <div class="card-content"><h3>Snickerdoodle</h3><p>Classic sugar cookie rolled in cinnamon.</p><div class="row"><span>₹200</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cookie">
+              <img src="https://plus.unsplash.com/premium_photo-1670895802275-ed748ced4309?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvb2tpZXxlbnwwfHwwfHx8MA%3D%3D" alt="Gingerbread" />
+              <div class="card-content"><h3>Gingerbread Box</h3><p>Spiced ginger and molasses classic cookies.</p><div class="row"><span>₹280</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="cookie">
+              <img src="https://plus.unsplash.com/premium_photo-1667488433536-47e54b5e51ba?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shortbread" />
+              <div class="card-content"><h3>Scottish Shortbread</h3><p>Melt-in-your-mouth pure butter shortbread.</p><div class="row"><span>₹260</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+
+            <!-- PASTRIES (9) -->
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1528975604071-b4dc52a2d18c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Assorted Macarons" />
+              <div class="card-content"><h3>Assorted Macarons</h3><p>Box of 6 French macarons in assorted flavors.</p><div class="row"><span>₹499</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1636894435570-c3c400dfac53?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vanilla Bean Tart" />
+              <div class="card-content"><h3>Vanilla Bean Tart</h3><p>Rich vanilla custard inside a crispy pastry shell.</p><div class="row"><span>₹350</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1713274784719-28739aefe219?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Butter Croissant" />
+              <div class="card-content"><h3>Butter Croissant</h3><p>Flaky, buttery, authentic French croissant.</p><div class="row"><span>₹180</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1727828659447-9ba18b9f9cdc?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Almond Croissant" />
+              <div class="card-content"><h3>Almond Croissant</h3><p>Filled with frangipane and topped with almonds.</p><div class="row"><span>₹220</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1706966371505-2a26bf75412b?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chocolate Eclair" />
+              <div class="card-content"><h3>Chocolate Eclair</h3><p>Choux pastry filled with cream, topped with chocolate.</p><div class="row"><span>₹200</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=600&q=80" alt="Fruit Tart" />
+              <div class="card-content"><h3>Fresh Fruit Tart</h3><p>Custard filled tart topped with seasonal fruits.</p><div class="row"><span>₹280</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1688458295588-2e876e7bb8ce?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mille-Feuille" />
+              <div class="card-content"><h3>Mille-Feuille</h3><p>Layers of puff pastry and vanilla cream.</p><div class="row"><span>₹350</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1578633701951-3a2a5318e2f0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Q2lubmFtb24lMjBSb2xsJTIwcGFzdHJ5fGVufDB8fDB8fHww" alt="Cinnamon Roll" />
+              <div class="card-content"><h3>Cinnamon Roll</h3><p>Warm pastry spiraled with cinnamon sugar.</p><div class="row"><span>₹190</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1613992281178-6c974accacff?q=80&w=1010&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cherry Danish" />
+              <div class="card-content"><h3>Cherry Danish</h3><p>Flaky pastry filled with sweet cherry compote.</p><div class="row"><span>₹210</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+            <article class="card fade-up" data-type="pastry">
+              <img src="https://images.unsplash.com/photo-1765100214138-05ccfe25d216?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Napoleon Pastry" />
+              <div class="card-content"><h3>Napoleon Pastry</h3><p>Crunchy layers of puff pastry with silky cream.</p><div class="row"><span>₹330</span><a href="./product-detail.html" class="btn mini">View</a></div></div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Sweet Crumbs Bakery</h3>
+            <p>Handcrafted desserts for birthdays, weddings, and corporate events.</p>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li>+92 300 1234567</li>
+              <li>hello@sweetcrumbs.com</li>
+              <li>Mon-Sun: 9 AM - 11 PM</li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright">© 2026 Sweet Crumbs Bakery. All rights reserved. Made by Areesha.</p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
