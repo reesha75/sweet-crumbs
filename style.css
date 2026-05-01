@@ -1182,6 +1182,34 @@ img {
 @media (max-width: 900px) {
   .menu-toggle {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    min-width: 4.5rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(209, 122, 158, 0.35);
+    background: rgba(243, 169, 199, 0.12);
+    color: var(--accent-dark);
+    font-weight: 700;
+    transition: transform var(--transition), background var(--transition), border-color var(--transition);
+  }
+
+  .menu-toggle::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 0.14rem;
+    border-radius: 999px;
+    background: currentColor;
+    box-shadow: 0 0.28rem 0 currentColor, 0 0.56rem 0 currentColor;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus-visible {
+    transform: translateY(-1px);
+    background: rgba(243, 169, 199, 0.18);
+    outline: none;
   }
 
   .nav-list {
