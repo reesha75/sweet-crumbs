@@ -4,8 +4,18 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navList = document.querySelector(".nav-list");
 
 if (menuToggle && navList) {
+  menuToggle.setAttribute("aria-expanded", "false");
+
   menuToggle.addEventListener("click", () => {
-    navList.classList.toggle("open");
+    const isOpen = navList.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navList.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      navList.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
   });
 }
 
