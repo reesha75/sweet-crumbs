@@ -1191,7 +1191,7 @@ img {
     border: 1px solid rgba(209, 122, 158, 0.35);
     background: rgba(243, 169, 199, 0.12);
     color: var(--accent-dark);
-    font-weight: 700;
+    font-size: 0;
     transition: transform var(--transition), background var(--transition), border-color var(--transition);
   }
 
@@ -1300,7 +1300,7 @@ img {
     border: 1px solid rgba(209, 122, 158, 0.35);
     background: rgba(243, 169, 199, 0.12);
     color: var(--accent-dark);
-    font-weight: 700;
+    font-size: 0;
     transition: transform var(--transition), background var(--transition), border-color var(--transition);
   }
 
@@ -1343,5 +1343,13 @@ img {
   .topbar {
     flex-wrap: wrap;
     padding: 0.75rem 0;
+  }
+
+  .page-hero {
+    padding: 2.2rem 0 1.2rem;
+  }
+
+  .hero-highlights {
+    display: none;
   }
 }
