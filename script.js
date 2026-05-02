@@ -147,6 +147,17 @@ function addToCart(product) {
   saveCartItems(cartItems);
   updateCartCount();
 }
+// ================= VIEW CART =================
+function setupViewCart() {
+  const viewCartLink = document.getElementById("view-cart-link");
+
+  if (!viewCartLink) return;
+
+  viewCartLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.location.href = "cart.html";
+  });
+}
 
 // ================= ADD BUTTON =================
 function setupAddButtons() {
@@ -191,9 +202,10 @@ function initImageFallbacks() {
 // ================= INIT =================
 function init() {
   setupAddButtons();
+    setupViewCart(); 
   initImageFallbacks();
   updateCartCount();
-  initPageLoader(); // ⚠️ IMPORTANT
+  initPageLoader(); 
 }
 
 init();
