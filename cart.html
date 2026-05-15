@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cart | Sweet Crumbs</title>
   <link rel="stylesheet" href="./style.css" />
+  <style>
+    /* Checkout Section Styles */
+    #checkout-section { margin-top: 2rem; padding-top: 2rem; border-top: 2px dashed #eee; display: none; }
+    .method-selector { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+    .method-card { 
+      flex: 1; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; text-align: center; cursor: pointer; transition: 0.3s;
+    }
+    .method-card.active { border-color: #d4a373; background: #fffaf5; box-shadow: 0 4px 12px rgba(212, 163, 115, 0.2); }
+    .details-form { background: #fdfdfd; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; display: none; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 0.3rem; font-size: 0.9rem; }
+    .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 6px; }
+    .hidden { display: none !important; }
+  </style>
 </head>
 <body>
 
@@ -20,20 +34,69 @@
     <h1>Your Cart</h1>
 
     <div id="cart-container"></div>
+    <h2 id="cart-total" style="margin-top: 1rem;">Total: ₹0</h2>
 
-    <h2 id="cart-total">Total: ₹0</h2>
+    <div id="place-order-btn-container" style="margin-top: 2rem;">
+        <button onclick="showCheckout()" class="btn primary" id="main-place-order">Place Order</button>
+    </div>
+
+    <section id="checkout-section">
+        <h3>Order Preferences</h3>
+        <p>How would you like to receive your sweet treats?</p>
+        
+        <div class="method-selector">
+            <div class="method-card" onclick="selectMethod('delivery')" id="m-delivery">
+                <strong>🚚 Delivery</strong>
+            </div>
+            <div class="method-card" onclick="selectMethod('takeaway')" id="m-takeaway">
+                <strong>🛍️ Takeaway</strong>
+            </div>
+            <div class="method-card" onclick="selectMethod('dinein')" id="m-dinein">
+                <strong>🍽️ Dine In</strong>
+            </div>
+        </div>
+
+        <div id="checkout-form" class="details-form">
+            <div id="delivery-fields" class="hidden">
+                <div class="form-group">
+                    <label>Full Address</label>
+                    <textarea id="address" placeholder="House #, Street, Area..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Contact Number</label>
+                    <input type="tel" id="phone" placeholder="+92 3xx xxxxxxx">
+                </div>
+            </div>
+
+            <div id="dinein-fields" class="hidden">
+                <div class="form-group">
+                    <label>Table Number</label>
+                    <input type="number" id="table-no" placeholder="Enter table number (1-20)">
+                </div>
+            </div>
+
+            <div id="takeaway-fields" class="hidden">
+                <p>✨ Your order will be ready for pickup in 20-30 minutes.</p>
+                <div class="form-group">
+                    <label>Pickup Time</label>
+                    <input type="time" id="pickup-time">
+                </div>
+            </div>
+
+            <button onclick="confirmOrder()" class="btn primary" style="width: 100%; margin-top: 1rem;">Confirm & Pay</button>
+        </div>
+    </section>
   </div>
 </main>
 
 <script>
 const CART_STORAGE_KEY = "sweetcrumbs-cart";
+let selectedMethod = '';
 
 function getCartItems() {
   try {
     return JSON.parse(localStorage.getItem(CART_STORAGE_KEY)) || [];
-  } catch {
-    return [];
-  }
+  } catch { return []; }
 }
 
 function saveCartItems(items) {
@@ -43,35 +106,77 @@ function saveCartItems(items) {
 function renderCart() {
   const container = document.getElementById("cart-container");
   const totalEl = document.getElementById("cart-total");
+  const checkoutSec = document.getElementById("checkout-section");
+  const placeOrderBtn = document.getElementById("main-place-order");
 
   const cartItems = getCartItems();
 
   if (cartItems.length === 0) {
     container.innerHTML = "<p>Your cart is empty 😢</p>";
     totalEl.textContent = "Total: ₹0";
+    placeOrderBtn.style.display = "none";
+    checkoutSec.style.display = "none";
     return;
   }
 
   let total = 0;
-
   container.innerHTML = cartItems.map((item, index) => {
     const price = parseInt(item.price.replace("₹", "")) || 0;
     total += price * item.quantity;
-
     return `
-      <div class="card" style="margin-bottom:1rem;">
-        <div class="row" style="justify-content: space-between;">
-          <div>
-            <h3>${item.name}</h3>
-            <p>${item.price} × ${item.quantity}</p>
+      <div class="card" style="margin-bottom:1rem; padding: 1rem;">
+        <div class="row" style="justify-content: space-between; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="${item.image}" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover;">
+            <div>
+                <h3 style="margin:0">${item.name}</h3>
+                <p style="margin:0">${item.price} × ${item.quantity}</p>
+            </div>
           </div>
-          <button onclick="removeItem(${index})" class="btn mini">Remove</button>
+          <button onclick="removeItem(${index})" class="btn mini" style="background: #ffeded; color: red; border:none;">Remove</button>
         </div>
       </div>
     `;
   }).join("");
 
   totalEl.textContent = "Total: ₹" + total;
+}
+
+function showCheckout() {
+    document.getElementById("checkout-section").style.display = "block";
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+
+function selectMethod(method) {
+    selectedMethod = method;
+    
+    // UI Update
+    document.querySelectorAll('.method-card').forEach(c => c.classList.remove('active'));
+    document.getElementById(`m-${method}`).classList.add('active');
+    
+    // Form Update
+    document.getElementById('checkout-form').style.display = "block";
+    document.getElementById('delivery-fields').classList.add('hidden');
+    document.getElementById('dinein-fields').classList.add('hidden');
+    document.getElementById('takeaway-fields').classList.add('hidden');
+    
+    document.getElementById(`${method}-fields`).classList.remove('hidden');
+}
+
+function confirmOrder() {
+    const cart = getCartItems();
+    if(cart.length === 0) return;
+
+    // Yahan hum real logic ki jagah professional alert de rahe hain
+    let details = "";
+    if(selectedMethod === 'delivery') details = "Address: " + document.getElementById('address').value;
+    if(selectedMethod === 'dinein') details = "Table: " + document.getElementById('table-no').value;
+    
+    alert(`🎉 Order Placed via ${selectedMethod.toUpperCase()}!\n\nThank you for choosing Sweet Crumbs Bakery. Your order is being prepared.`);
+    
+    // Clear Cart after order
+    localStorage.removeItem(CART_STORAGE_KEY);
+    window.location.href = "index.html"; 
 }
 
 function removeItem(index) {
