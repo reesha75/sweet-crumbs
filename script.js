@@ -25,7 +25,7 @@ function checkAuthStatus() {
     }
 }
 
-// Auth Toggle logic (Login <-> Signup)
+// Toggle between Boxes (Ye bilkul theek hai)
 if (toRegisterLink && toLoginLink) {
     toRegisterLink.addEventListener("click", (e) => {
         e.preventDefault();
@@ -36,6 +36,51 @@ if (toRegisterLink && toLoginLink) {
         e.preventDefault();
         registerBox.classList.add("hidden");
         loginBox.classList.remove("hidden");
+    });
+}
+
+// --- YAHAN CHANGES KARNI HAIN (Submit Handlers) ---
+
+// Handle Registration
+if (registerForm) {
+    registerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("register-name").value;
+        const email = document.getElementById("register-email").value;
+        const password = document.getElementById("register-password").value;
+
+        localStorage.setItem(`user_${email}`, JSON.stringify({ name, email, password }));
+        
+        alert("Account created! Please login now.");
+        // Signup ke baad login box dikhao
+        registerBox.classList.add("hidden");
+        loginBox.classList.remove("hidden");
+    });
+}
+
+// Handle Login
+if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("login-email").value;
+        const password = document.getElementById("login-password").value;
+        const savedUser = localStorage.getItem(`user_${email}`);
+
+        if (savedUser) {
+            const parsedUser = JSON.parse(savedUser);
+            if (parsedUser.password === password) {
+                // Success: Session save karo aur reload karo
+                localStorage.setItem("sc-user-logged-in", "true");
+                localStorage.setItem("sc-current-user", parsedUser.name);
+                
+                alert(`Welcome back, ${parsedUser.name}!`);
+                window.location.reload(); // Is se modal permanent chala jayega
+            } else {
+                alert("Incorrect password!");
+            }
+        } else {
+            alert("No account found! Please register.");
+        }
     });
 }
 

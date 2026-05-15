@@ -1457,3 +1457,6 @@ img {
 body.modal-open {
   overflow: hidden;
 }
+.hidden {
+    display: none ;
+}
